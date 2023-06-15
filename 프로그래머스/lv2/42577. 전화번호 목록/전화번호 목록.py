@@ -3,7 +3,8 @@ def solution(phone_book):
     phoneLength = len(phone_book)
     for phoneIndex in range(phoneLength-1):
         phone = phone_book[phoneIndex];
-        if phone == phone_book[phoneIndex+1][0:len(phone)]:
+        phoneNext = phone_book[phoneIndex+1];
+        if phoneNext.startswith(phone):
             return False
     return True
     
